@@ -8,3 +8,8 @@ app = fastapi.FastAPI()
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
+
+@app.post("/")
+def create_item(item: fastapi.HTTPException):
+    return {"item": item}
